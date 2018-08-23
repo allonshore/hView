@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>hView</title>
+</head>
+
+<body>
+    <div id="app">
+        {{message}}
+
+    </div>
+    <script src="./node_modules/vue/dist/vue.min.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                message: 'hi'
+            }
+        })
+    </script>
+</body>
+
+</html>
