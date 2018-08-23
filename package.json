@@ -1,0 +1,26 @@
+{
+  "name": "hview",
+  "version": "0.0.1",
+  "description": "这是一个UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allonshore/hView.git"
+  },
+  "keywords": [
+    "vue",
+    "ui",
+    "javascript",
+    "css",
+    "html"
+  ],
+  "author": "hongbo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allonshore/hView/issues"
+  },
+  "homepage": "https://github.com/allonshore/hView#readme"
+}
