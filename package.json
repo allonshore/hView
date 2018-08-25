@@ -22,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/allonshore/hView/issues"
   },
-  "homepage": "https://github.com/allonshore/hView#readme"
+  "homepage": "https://github.com/allonshore/hView#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.9.7"
+  },
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
 }
