@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/allonshore/hView#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.9.7"
+    "@vue/component-compiler-utils": "^2.2.0",
+    "parcel-bundler": "^1.9.7",
+    "vue-template-compiler": "2.5.17"
   },
   "dependencies": {
     "vue": "^2.5.17"
