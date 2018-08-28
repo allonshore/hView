@@ -6,6 +6,15 @@
 
 <script>
     export default {
+        mounted(){
+            console.log(this.$el.children);
+            for(let node of this.$el.children){  //做内部元素验证 避免用户乱搞
+                console.log(node)
+                if(node.nodeName.toLowerCase() !== 'button'){
+                    console.warn(`g-button-group 的子元素应该全是 g-button,但是你写的是${node.nodeName.toLowerCase()}`)
+                }
+            }
+        }
     }
 </script>
 
