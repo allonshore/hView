@@ -3,7 +3,8 @@
         <!--<svg v-if="icon" class="icon">-->
             <!--<use :xlink:href="`#i-${icon}`"></use>-->
         <!--</svg>-->
-        <g-icon v-if="icon" :name="icon"></g-icon>
+        <g-icon v-if="icon" :name="icon" class="icon"></g-icon>
+        <g-icon class="loading" v-if="icon" name="loading"></g-icon>
         <div class="content">
              <slot></slot>
         </div>
@@ -18,13 +19,14 @@
         props:{
             icon:{},
             iconPosition:{
-                type: String,
+                type:String,
                 default:'left',
                 validator(value){  //属性检查器
-                    if(value !== "left" || value !== "right"){
-                        return false
-                    }
-                    return true;
+                    // if(value !== "left" || value !== "right"){
+                    //     return false
+                    // }
+                    // return true;
+                    return value === "left" || value === "right"
                 }
             }
         }
@@ -32,6 +34,10 @@
 </script>
 
 <style lang="scss">
+    @keyframes spin {
+        0%{transform:rotate(0deg);}
+        100%{transform:rotate(360deg);}
+    }
     .g-button {
         font-size: var(--font-size);
         height: var(--button-height);
@@ -57,6 +63,9 @@
         &.icon-right{
             > .icon{order: 2;margin-left: .3em;margin-right: .3em;}
             > .content{order: 1;}
+        }
+        .loading{
+            animation: spin 1s infinite linear;
         }
     }
 
