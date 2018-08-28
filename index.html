@@ -45,13 +45,13 @@
 
 <body>
 <div id="app">
-    <g-button>
+    <g-button :loading="loading1" @click="loading1 = !loading1">
         按钮
     </g-button>
-    <g-button icon="down" >
+    <g-button icon="down" :loading="true">
         按钮
     </g-button>
-    <g-button icon="down" icon-position="right">
+    <g-button icon="down" icon-position="right" :loading="true">
         按钮
     </g-button>
 </div>
