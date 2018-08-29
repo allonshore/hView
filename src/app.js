@@ -11,3 +11,16 @@ new Vue({
         loading1:false
     }
 });
+
+//单元测试
+{
+    const Constructor = Vue.extend(Button);
+    const button = new Constructor({
+      propsData:{
+          icon:'setting'
+      }
+    })
+    button.$mount('#test');
+    let useElement = button.$el.querySelector('use');
+
+}
