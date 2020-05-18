@@ -1,5 +1,6 @@
 <template>
     <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
+                        <!-- g-button是自己写的 vue不知道 $emit('click') 触发内部选定的事件-->
         <!--<svg v-if="icon" class="icon">-->
             <!--<use :xlink:href="`#i-${icon}`"></use>-->
         <!--</svg>-->
