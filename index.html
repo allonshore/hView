@@ -52,8 +52,13 @@
 <body>
 <div id="app">
     <g-layout style="height: 100vh">
-        <g-header class="demo">header</g-header>
-        <g-content class="demo">content</g-content>
+        <g-header class="demo">header
+            <g-button @click="toastMessage()"></g-button>
+        </g-header>
+    <g-layout>
+        <g-sider>xx</g-sider>
+        <g-content>fff</g-content>
+    </g-layout>
         <g-footer class="demo">footer</g-footer>
     </g-layout>
 <!--    <g-row>-->
