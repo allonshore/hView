@@ -34,21 +34,35 @@ export default {
         }
     },
     mounted(){
-        if(this.autoClose){
-            setTimeout(()=>{
-              this.close()
-            },this.autoCloseDelay * 1000)
-        }
+        // if(this.autoClose){
+        //     setTimeout(()=>{
+        //       this.close()
+        //     },this.autoCloseDelay * 1000)
+        // }
+        this.execAutoClose()
+        this.updateStyles()
         //使用vue提供 时间差问题
-        this.$nextTick(()=>{
-            this.$ref.line.style.height = `${this.$ref.wraper.getBoundingClientRect().height}px`
-        })
+        // this.$nextTick(()=>{
+        //     this.$ref.line.style.height = `${this.$ref.wraper.getBoundingClientRect().height}px`
+        // })
         // setTimeout(()=>{
         //     this.$ref.line.style.height = this.$ref.wraper.getBoundingClientRect().height
         // },1000)
         //如果眼睛看到不为0 js获取的为0 大部分是异步问题
     },
     methods:{
+       updateStyles(){
+          this.$nextTick(()=>{
+            this.$ref.line.style.height = `${this.$ref.wraper.getBoundingClientRect().height}px`
+        })
+       },
+       execAutoClose(){
+          if(this.autoClose){
+            setTimeout(()=>{
+              this.close()
+            },this.autoCloseDelay * 1000)
+        }
+       },
        close(){
            this.$el.remove(); //把自己元素消除掉
            this.$destroy();//把绑定的事件取消掉
