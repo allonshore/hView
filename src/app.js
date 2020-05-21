@@ -33,8 +33,10 @@ new Vue({
         message:""
     },
     methods:{
-        toastMessage(e){
-            console.log(e.target.value)
+        toastMessage(){
+           this.$toast("<p>sss</p><strong>34532543</strong>",{
+              enableHtml:false
+           })
         }
     }
 });
