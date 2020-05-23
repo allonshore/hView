@@ -1,17 +1,17 @@
 <template>
-    <div class="header">
+    <div class="tabs">
         <slot></slot>
     </div>
 </template>
 
 <script>
     export default {
-
+        name: "Hongbotabs"
     }
 </script>
 
-<style lang="scss" scoped>
-.header{
+<style scoped>
+.tabs{
 
 }
 </style>
